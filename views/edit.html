@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Dashboard Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/public/css/main.css" rel="stylesheet">
+
+  </head>
+  <body>
+    
+
+    <div class="container-fluid">
+      <div class="row">
+        
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">添加学生</h1>
+          <div class="table-responsive">
+            <form action="/students/edit" method="POST">
+              <input type="hidden" name="id" value = "{{student.id}}">
+              <div class="form-group">
+                <label for="">姓名</label>
+                <input type="text" class="form-control" name="name" value = "{{student.name}}" >
+              </div>
+
+              <div class="form-group">
+                <label for="exampleInputPassword1">性别</label>
+              </div>
+
+              <div class="form-group">
+                <label class="checkbox-inline">
+                  <input type="radio" id="inlineCheckbox1" name="gender" value="0" checked> 男
+                </label>
+                <label class="checkbox-inline">
+                  <input type="radio" id="inlineCheckbox2" name="gender" value="1"> 女
+                </label>
+              </div>
+          
+              <div class="form-group">
+                <label for="">年龄</label>
+                <input type="number" class="form-control" name="age"  id=""  value = "{{student.age}}">
+              </div>
+              <div class="form-group">
+                <label for="">爱好</label>
+                <input type="text" class="form-control" name="hobbies"  id="" value = "{{student.hobbies}}">
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
